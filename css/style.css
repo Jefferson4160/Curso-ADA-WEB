@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* O border-box define que o tamanho dos elementos será justamente aqueles que são definidos, dando previsibilidade aos formatos. A largura total já inclui o padding, o margin e o conteudo.
+  Tras facilidade na responsividade */
+  box-sizing: border-box;
+}
+
+/* Aplicamos a fonte buscada no fonts.google a todos esses eleentos abaixo, caso a font-family Heebo não seja localizada ele utiliza sans-serif */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Heebo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #fff;
+  height: 5rem;
+}
+
+header #navbar {
+  /* Para posicionar os elementos um ao lado do outro */
+  display: flex;
+  /* Dessa forma inserimos um espaço entre os elementos, agindo de forma dinamica */
+  justify-content: space-between;
+  /* Isso nos permite alinhar verticalmente os elementos */
+  align-items: center;
+  /* Um afastamento das laterais. Deixamos vazio em baixo e em cima e 2rem na esquerda e direita, isso prq fica váriável a depender do tamanho da tela, não é fixo como usar o px */
+  padding: 0 3rem;
+  /* Dessa forma se a pág for exibida em uma tela muito grande, os elementos não vão ficar tão estanhos com os elementos de uma navbar extremamente grande */
+  max-width: 1200px;
+  /* Dessa forma os elementos irão ficar centralizados, sem margem superior e inferior e as laterais ele controla de forma automatica de forma que seja distribuido igualmente */
+  margin: 0 auto;
+  /* Coloquei a mesma altura do header, pois o navbar ocupa todo o header */
+  height: 5rem;
+}
+
+/* O brand(marca) é o elmento principal de identificação do site ou aplicação, geralmente inserimos o logo ou nome da empresa */
+header #navbar .nav-brand {
+  /* Removemos o estilo de link */
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+header #navbar .nav-list {
+  /* Remove o estilo de lista, as bolinhas de marcação */
+  list-style: none;
+  /* Isso permite por os itens lado a lado */
+  display: flex;
+  align-items: center;
+  /* Isso serve para inserir um espaço entre os elementos */
+  gap: 2rem;
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color: #000000;
+  /* Aqui coloco uma sombra no texto defino o deslocamento horizontal, deslocamento vertical, o raio de desfoque ( o quão borrada a sombra será). No rgba definimos a cor e o quarto item é a opacidade. */
+  text-shadow: 0.32rem 0.24rem 0.32rem rgba(27, 27, 27, 0.5);
+}
+
+/* -------------------------------------------- */
+/* ----------- SECTION BANNER  --------------*/
+/* -------------------------------------------- */
+
+main {
+  margin-top: 6rem;
+}
+
+main #banner {
+  /* Pois os elementos dentro do banner quero lado a lado */
+  display: flex;
+  /* para manter um afastamente entre os elementos */
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+main #banner .banner-content .banner-content-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--Dark-Color, #21243d);
+  line-height: 3.75rem;
+  width: 31rem;
+  margin-bottom: 2.5rem;
+}
+
+main #banner .banner-content .banner-content-subtitle {
+  width: 31rem;
+  color: var(--Dark-Color, #21243d);
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 32rem;
+  margin-bottom: 2.5rem;
+}
+
+main #banner .banner-content .banner-content-btn {
+  border-radius: 0.125rem;
+  background: var(--Primary, #ff6464);
+  border-style: none;
+  height: 3rem;
+  padding: 0.5rem 1.5rem;
+
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+main #banner .banner-image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 18.75rem;
+}

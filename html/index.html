@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- No fonts.google procuramos a fonte desejada e pegamos o código para incorpora-la dentro do nosso código. assim q a pág abrir ele busca e aplica a fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Portifolio</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <a class="nav-brand" href="#">Jefferson Silva</a>
+
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#">Works</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Aqui nós começamos a divisão dos elementos, teremos uma parte de textos e botões a esquerda e uma imagem a direita, então teremos duas "caixas" uma ao lado da outra. Vamos usar o display flex no css -->
+      <section id="banner">
+        <div class="banner-content">
+          <h1 class="banner-content-title">
+            Hi, I am Jefferson,<br />Creative Technologist
+          </h1>
+          <p class="banner-content-subtitle">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit. Exercitation
+            veniam consequat sunt nostrud amet.
+          </p>
+          <button class="banner-content-btn">Download Resume</button>
+        </div>
+        <!-- Aqui entrei no github e peguei o link da imagem do perfil -->
+        <img
+          src="https://avatars.githubusercontent.com/u/187123227?v=4"
+          alt="Jefferson Silva"
+          class="banner-image"
+        />
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
