@@ -76,6 +76,26 @@ header #navbar .nav-list .nav-item a:hover {
   text-shadow: 0.32rem 0.24rem 0.32rem rgba(27, 27, 27, 0.5);
 }
 
+header .menu-hamburguer {
+  display: none;
+}
+
+@media (max-width: 720px) {
+ 
+  header #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .menu-hamburguer {
+    display: block;
+  }
+
+  header #navbar .nav-list{
+    display: none;
+  }
+}
+
 /* -------------------------------------------- */
 /* ----------- SECTION BANNER  --------------*/
 /* -------------------------------------------- */
@@ -129,4 +149,95 @@ main #banner .banner-image {
   width: 100%;
   height: 100%;
   max-width: 18.75rem;
+}
+
+@media (max-width: 920px) {
+  main #banner {
+  /* Os elementos ficam um em cima do outro, o reverse faz com que o elemento da direita que vá para o topo */
+  flex-direction: column-reverse;
+  /* alinha os itens verticalmente*/
+  align-items: center;
+  gap: 2rem;
+  }
+  
+  main #banner .banner-content{
+    text-align: center;
+  }
+
+}
+  
+
+/* -------------------------------------------- */
+/* ----------- SECTION POSTS  --------------*/
+/* -------------------------------------------- */
+
+section#posts {
+  background: #e9f9ff;
+  margin-top: 4.5rem;
+}
+
+.post-content {
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+#posts .post-content .post-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#posts .post-content .post-content-header .section-title {
+  color: var(--Dark-Color, #21243D);
+  font-weight: 500;
+  font-size: 1.375rem;
+  line-height: 3.75rem;
+  margin-top: 0.5rem;
+}
+
+#posts .post-content .post-content-header .view-all-link {
+  color: var(--Secondry, #00A8CC);
+  text-align: right;
+  font-size: 1rem;
+  text-decoration: none;
+} 
+
+#posts .post-content .post-cards {
+  display: flex;
+  gap: 1.25rem;
+}
+
+#posts .post-content .post-cards .post-card {
+  border-radius: 0.25rem;
+  /* width: 26.25rem;
+  height: 18.5rem; */
+  background: #FFF;
+  box-shadow: 0 4px 10px 0 rgba(187, 225, 250, 0.25);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#posts .post-content .post-cards .post-card h3{
+  color: var(--Dark-Color, #21243D);
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+#posts .post-content .post-cards .post-card span {
+  /* Devo usar o display block para poder usar o margin-bottom pois o span é um elemento inline, que ignora as propriedades de margem vertical */
+  display: block;
+  color: var(--Dark-Color, #21243D);
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.7rem;
+}
+
+@media (max-width: 720px) {
+  #posts .post-content .post-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
 }
